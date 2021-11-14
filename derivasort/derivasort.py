@@ -7,6 +7,8 @@ testList = [1,2,8,6,54,4,3]
 
 def derivasort(liste:list) -> list:
     splitLists = splitList(liste, derive(liste))
+    for i in splitLists:
+        pass
     
     
 
@@ -32,8 +34,8 @@ def derive(liste:list) -> list: #retourne une liste avec le sens de variation en
 
 def deriveToInfinity(liste:list) -> None: #cette fonction sert a rien mais elle est drole
     if len(liste) <= 1:
-        return liste
-    print(derive(liste))
-    print(deriveToInfinity(derive(liste)))
+        return [0]
+    deriveList = derive(liste)
+    print(deriveList)
+    deriveToInfinity(deriveList)
 
-print()
